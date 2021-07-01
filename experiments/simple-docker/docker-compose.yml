@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  celebi:
+    build: ./build/
+    command: receptor -c /app/celebi.yaml
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+
+  arceus:
+    build: ./build/
+    command: receptor -c /app/arceus.yaml
+    volumes:
+      - ./:/app:ro

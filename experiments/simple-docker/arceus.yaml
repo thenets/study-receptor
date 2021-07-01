@@ -1,0 +1,16 @@
+---
+- node:
+    id: arceus
+
+- control-service:
+    service: control
+    filename: /tmp/arceus.sock
+
+- tcp-listener:
+    port: 2223
+
+- work-command:
+    worktype: echo
+    command: echo
+    params: arceus
+    allowruntimeparams: true
