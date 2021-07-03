@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   celebi:
-    build: ./build/
+    build: ./build/receptor/
     command: receptor -c /app/celebi.yaml
     volumes:
       - type: bind
@@ -9,7 +9,14 @@ services:
         target: /app
 
   arceus:
-    build: ./build/
+    build: ./build/receptor/
     command: receptor -c /app/arceus.yaml
     volumes:
-      - ./:/app:ro
+      - ./:/app
+
+  receptorctl:
+    build: ./build/receptorctl/
+    environment:
+      RECEPTORCTL_SOCKET: /app/socks/celebi.sock
+    volumes:
+      - ./:/app

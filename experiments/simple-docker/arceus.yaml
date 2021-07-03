@@ -4,7 +4,7 @@
 
 - control-service:
     service: control
-    filename: /tmp/arceus.sock
+    filename: /app/socks/arceus.sock
 
 - tcp-listener:
     port: 2223

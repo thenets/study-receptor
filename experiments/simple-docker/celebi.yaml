@@ -10,4 +10,4 @@
 
 - control-service:
     service: control
-    filename: /tmp/celebi.sock
+    filename: /app/socks/celebi.sock
