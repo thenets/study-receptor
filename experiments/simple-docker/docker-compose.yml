@@ -4,9 +4,7 @@ services:
     build: ./build/receptor/
     command: receptor -c /app/celebi.yaml
     volumes:
-      - type: bind
-        source: ./
-        target: /app
+      - ./:/app
 
   arceus:
     build: ./build/receptor/
